@@ -4,8 +4,8 @@ import React from 'react';
 
 const Navbar = (props) => {
     return ( 
-        <nav class="navbar navbar-expand-lg navbar-dark" style={{ paddingRight: '5%', paddingLeft: '5%' }}>
-            <a class="navbar-brand" href="#"><i class="fa-solid fa-shuttle-space"></i> AstroBox</a>
+        <nav class="navbar navbar-expand-lg navbar-dark" style={{ paddingRight: '5%', paddingLeft: '5%', fontFamily: 'Mukta, san-serif', fontSize: '20px' }}>
+            <a class="navbar-brand" href="#" style={{ fontSize: '35px'}}><i class="fa-solid fa-shuttle-space"></i> AstroBox</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
