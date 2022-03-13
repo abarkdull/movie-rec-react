@@ -8,14 +8,17 @@ const MoviePoster = (props) => {
     useEffect(() => {
         const search = async () => {
             console.log('running search');
-            const imdbData = await axios.get('https://imdb-api.com/en/API/Search/k_7vd2w9n4/inception 2010');
+            const imdbData = await axios.get('https://imdb-api.com/en/API/SearchMovie/k_vzvz8a1v/inception');
 
             console.log(imdbData.data);
             setPosterHref(imdbData.data.results[0].image);
             
         }
         
-        search();
+        if (props.movie) {
+            search();
+        }
+
     });
 
     return ( 
