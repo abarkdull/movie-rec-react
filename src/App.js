@@ -5,6 +5,7 @@ import Banner from './components/Banner';
 import movie_api from './movie_api';
 import Results from './components/Results';
 import MoviePoster from './components/MoviePoster';
+import Section from './components/Section';
 
 const App = () => {
 
@@ -24,7 +25,6 @@ const App = () => {
     }
 
     const onActiveMovieChange = (movie) => {
-        console.log('Active movie set, ', movie);
         setActiveMovie(movie)
     }
     
@@ -34,21 +34,21 @@ const App = () => {
             <div style={{ backgroundImage: 'url(moroccan-flower-dark.png) '}}>
                 <Navbar />
                 <div className='container-fluid' style={{ backgroundColor: 'transparent' }}>
-                    <section id='title'>
+                    <Section>
                         <div className='row'>
                             <Banner />
                         </div>
                         <div className='row' style={{ padding: "5% 20% 15%" }}>
                             <SearchBar onSearchSubmit={(movie) => search(movie)} />
                         </div>
-                    </section>
+                    </Section>
                 </div>
             </div>
                 
             <div>
                 <div>
                     <section id="results">
-                        <div className='row'>
+                        <div className='row results-row'>
 
                             <div className='col-lg-6 movie-results'>
                                 <Results onActiveMovieChange={(movie) => onActiveMovieChange(movie)} movies={results} />
