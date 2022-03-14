@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+/* eslint-disable no-script-url */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const MovieDetails = (props) => {
@@ -12,10 +14,19 @@ const MovieDetails = (props) => {
         setMovieInfo(response.data) 
     }
 
+    // if active movie changes, setMovieInfo to empty string
+    useEffect(() => setMovieInfo(''), [props.movie]);
 
 
     if (movieInfo) {
-        <div className=''></div>
+        return (
+            <div className='col-lg-6 movie-details'>
+                <p>Title: {movieInfo.title}</p>
+                <p>Director: {movieInfo.directors}</p>
+                <p>Actors: {movieInfo.stars}</p>
+                <p>Release Date: {movieInfo.releaseDate}</p>
+            </div>
+        )
     }
     else {
         return (
