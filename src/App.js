@@ -13,14 +13,15 @@ const App = () => {
     const [activeMovie, setActiveMovie] = useState('')
 
     const search = async (term) => {
-        const response = await movie_api.get('/search', {
+        const response = await movie_api.get('/imdb', {
             params: {
                 q: term
             }
         })
 
-        if (response.data.movies) {
-            setResults(response.data.movies);
+        if (response.data) {
+            console.log(response.data);
+            setResults(response.data);
         } 
     }
 

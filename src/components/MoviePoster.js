@@ -1,23 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+
 
 const MoviePoster = (props) => {
 
     const [posterHref, setPosterHref] = useState(null)
 
     useEffect(() => {
-        // const search = async () => {
-        //     console.log('running search');
-        //     const imdbData = await axios.get('https://imdb-api.com/en/API/SearchMovie/k_vzvz8a1v/inception');
 
-        //     console.log(imdbData.data);
-        //     setPosterHref(imdbData.data.results[0].image);
-            
-        // }
+        if (props.movie) {
+            console.log(props.movie.image);
+            setPosterHref(props.movie.image)
+        }
+
         
-        // if (props.movie) {
-        //     search();
-        // }
 
         console.log("search ran");
 
@@ -25,7 +20,7 @@ const MoviePoster = (props) => {
 
     return ( 
         <div>
-            <img src={posterHref} alt='' ></img>
+            <img className='movie-poster' src={posterHref} alt='' ></img>
         </div>
     );
 }

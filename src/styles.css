@@ -23,3 +23,7 @@
 .results-row {
     padding: 11% 5%
 }
+
+.movie-poster {
+    max-width: 300px;
+}

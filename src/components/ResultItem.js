@@ -19,7 +19,7 @@ const ResultItem = (props) => {
                 }
             }
             >
-        {props.movieItem}</li>
+        {props.movieItem.title}</li>
      );
 }
  
