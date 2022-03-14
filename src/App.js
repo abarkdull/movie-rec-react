@@ -6,6 +6,7 @@ import movie_api from './movie_api';
 import Results from './components/Results';
 import MoviePoster from './components/MoviePoster';
 import Section from './components/Section';
+import MovieDetails from './components/MovieDetails';
 
 const App = () => {
 
@@ -47,15 +48,18 @@ const App = () => {
             </div>
                 
             <div>
-                <div>
+                <div className='container-fluid'>
                     <section id="results">
                         <div className='row results-row'>
 
                             <div className='col-lg-6 movie-results'>
                                 <Results onActiveMovieChange={(movie) => onActiveMovieChange(movie)} movies={results} />
                             </div>
-                            <div className='col-lg-6 movie-poster'>
-                                <MoviePoster movie={activeMovie}/>
+                            <div className='col-lg-6 movie-poster-col'>
+                                <div className='row'>
+                                    <MoviePoster movie={activeMovie}/>
+                                    <MovieDetails movie={activeMovie} />
+                                </div>
                             </div>
 
                         </div>

@@ -8,18 +8,13 @@ const MoviePoster = (props) => {
     useEffect(() => {
 
         if (props.movie) {
-            console.log(props.movie.image);
             setPosterHref(props.movie.image)
         }
-
-        
-
-        console.log("search ran");
 
     });
 
     return ( 
-        <div>
+        <div className='col-lg-6'>
             <img className='movie-poster' src={posterHref} alt='' ></img>
         </div>
     );
