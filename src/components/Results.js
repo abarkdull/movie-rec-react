@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ResultItem from './ResultItem';
 
 const Results = (props) => {
 
     const [activeMovie, setActiveMovie] = useState('');
+    
+
+    useEffect(() => {
+
+    }, []);
 
     const renderedResults = props.movies.map((movie) => {
         return (
