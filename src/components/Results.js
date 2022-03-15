@@ -16,7 +16,7 @@ const Results = (props) => {
     })
 
     return ( 
-        <ul class="list-group">
+        <ul class="list-group bg-transparent list-group-mine" style={{  }}>
             {renderedResults}
         </ul>
      );

@@ -13,7 +13,7 @@ const ResultItem = (props) => {
     })
 
     return ( 
-        <li class={`list-group-item ${propActive}`} 
+        <li class={`list-group-item ${propActive} bg-transparent custom-list-item`} 
             onClick={(e) => {
                 props.onActiveMovieChange(props.movieItem)
                 }

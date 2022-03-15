@@ -12,6 +12,7 @@ const App = () => {
 
     const [results, setResults] = useState([])
     const [activeMovie, setActiveMovie] = useState('')
+    const [fullScreen, setFullScreen] = useState('none')
 
     const search = async (term) => {
         const response = await movie_api.get('/imdb', {
@@ -21,7 +22,7 @@ const App = () => {
         })
 
         if (response.data) {
-            console.log(response.data);
+            setFullScreen('')
             setResults(response.data);
         } 
     }
@@ -32,22 +33,22 @@ const App = () => {
     
 
     return (
-        <div>
-            <div style={{ backgroundImage: 'url(moroccan-flower-dark.png) '}}>
+        <div style={{ backgroundAttachment: 'fixed', backgroundImage: 'url(background.jpg)', backgroundSize: 'cover', backgroundPosition: ''  }}>
+            <div style={{ }}>
                 <Navbar />
-                <div className='container-fluid' style={{ backgroundColor: 'transparent' }}>
+                <div className='container-fluid' style={{  }}>
                     <Section>
                         <div className='row'>
                             <Banner />
                         </div>
-                        <div className='row' style={{ padding: "5% 20% 15%" }}>
+                        <div className='row search-bar' style={{ padding: "8% 20% 14%" }}>
                             <SearchBar onSearchSubmit={(movie) => search(movie)} />
                         </div>
                     </Section>
                 </div>
             </div>
                 
-            <div>
+            <div style={{ }}>
                 <div className='container-fluid'>
                     <section id="results">
                         <div className='row results-row'>
