@@ -47,7 +47,7 @@ const App = () => {
                         <div className='row'>
                             <Banner />
                         </div>
-                        <div className='row search-bar' style={{ padding: "8% 20% 14%" }}>
+                        <div className='row search-bar' style={{ padding: "8% 20% 8%" }}>
                             <SearchBar onSearchSubmit={(movie) => search(movie)} />
                         </div>
                     </Section>
@@ -64,7 +64,7 @@ const App = () => {
                             </div>
                             <div className='col-lg-6 movie-poster-col'>
                                 <div className='row'>
-                                    <MoviePoster movie={activeMovie}/>
+                                    <MoviePoster movie={activeMovie}/>                   
                                     <MovieDetails movie={activeMovie} />
                                 </div>
                             </div>
