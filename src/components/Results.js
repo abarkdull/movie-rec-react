@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ResultItem from './ResultItem';
 
-const Results = (props) => {
+const Results = (props) => {    
 
-    const [activeMovie, setActiveMovie] = useState('');
-    
-
-    useEffect(() => {
-
-    }, []);
 
     const renderedResults = props.movies.map((movie) => {
         return (
-            <ResultItem activeMovie={activeMovie} movieItem={movie} onActiveMovieChange={(movie) => {
-                    setActiveMovie(movie)
+            <ResultItem activeMovie={props.activeMovie} movieItem={movie} onActiveMovieChange={(movie) => {
                     props.onActiveMovieChange(movie)
                 }} 
             />
