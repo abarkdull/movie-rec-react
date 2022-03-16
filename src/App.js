@@ -63,8 +63,8 @@ const App = () => {
                 <div className='container-fluid'>
                     <section id="results" ref={resultsRef}>
                         <div className='row results-row'>
-
-                            <div className='col-lg-6 movie-results'>
+                            <h1 style={{ fontFamily: 'Lato', textAlign: 'center', paddingBottom: '5%'}}>Your recommendations:</h1>
+                            <div className='col-lg-6 movie-results' style={{}}>
                                 <Results onActiveMovieChange={(movie) => onActiveMovieChange(movie)} movies={results} activeMovie={activeMovie} />
                             </div>
                             <div className='col-lg-6 movie-poster-col'>
@@ -73,7 +73,6 @@ const App = () => {
                                     <MovieDetails movie={activeMovie} />
                                 </div>
                             </div>
-
                         </div>
                     </section>
                 </div>

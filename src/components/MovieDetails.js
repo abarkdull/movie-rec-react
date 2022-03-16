@@ -22,9 +22,13 @@ const MovieDetails = (props) => {
         return (
             <div className='col-lg-6 movie-details'>
                 <p>Title: {movieInfo.title}</p>
-                <p>Director: {movieInfo.directors}</p>
+                <p>Director(s): {movieInfo.directors}</p>
+                <p>Writer(s): {movieInfo.writers}</p>
                 <p>Actors: {movieInfo.stars}</p>
                 <p>Release Date: {movieInfo.releaseDate}</p>
+                <p>Genre(s): {movieInfo.genres}</p>
+                <p>Metactritic rating: {movieInfo.metacriticRating}</p>
+                <p>Plot: {movieInfo.plot}</p>
             </div>
         )
     }

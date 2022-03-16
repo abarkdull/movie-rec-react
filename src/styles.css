@@ -17,12 +17,17 @@
 }
 
 .movie-results {
-    padding-right: 8%;
+    padding-right: 10%;
     padding-left: 5%;
 }
 
 .results-row {
-    padding: 11% 5%;
+    padding: 6% 4%;
+}
+
+.results-row h1 {
+    color: white;
+    font-size: 40px;
 }
 
 .movie-poster {
@@ -34,6 +39,7 @@
     word-wrap: break-word;
     color: white;
 }
+
 
 
 /* backgroundAttachment: 'fixed', backgroundImage: 'url(background.jpg)', backgroundSize: 'cover', backgroundPosition: ''  */
@@ -57,4 +63,10 @@
     background-image: url(../public/background.jpg);
     background-attachment: fixed;
     background-size: cover;
+}
+
+.results-border {
+    border-radius: 25px;
+    border: 2px solid white;
+
 }
