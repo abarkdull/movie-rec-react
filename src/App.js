@@ -23,7 +23,7 @@ const App = () => {
             }
         })
 
-        if (response.data) {
+        if (response.data.length > 2) {
             console.log(response.data);
             setFullScreen('')
             setResults(response.data);
