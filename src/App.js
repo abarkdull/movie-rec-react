@@ -13,6 +13,7 @@ const App = () => {
     const [results, setResults] = useState([])
     const [activeMovie, setActiveMovie] = useState('')
     const [fullScreen, setFullScreen] = useState('full-screen')
+    const [validSearch, setValidSearch] = useState('')
 
     const resultsRef = useRef(null)
 
@@ -29,7 +30,11 @@ const App = () => {
             setResults(response.data);
             setActiveMovie(response.data[0])
             resultsRef.current.scrollIntoView();
+            setValidSearch('is-valid')
         } 
+        else {
+            setValidSearch('is-invalid')
+        }
     }
 
     const onActiveMovieChange = (movie) => {
@@ -48,7 +53,7 @@ const App = () => {
                             <Banner />
                         </div>
                         <div className='row search-bar' style={{ padding: "8% 20% 8%" }}>
-                            <SearchBar onSearchSubmit={(movie) => search(movie)} />
+                            <SearchBar searchValidity={validSearch} onSearchSubmit={(movie) => search(movie)} />
                         </div>
                     </Section>
                 </div>
