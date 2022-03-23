@@ -9,7 +9,7 @@ const MovieDetails = (props) => {
 
     const queryIMDB = async () => {
 
-        const url = 'https://imdb-api.com/en/API/Title/k_vzvz8a1v/' + props.movie.id
+        const url = 'https://imdb-api.com/en/API/Title/k_7vd2w9n4/' + props.movie.id
         const response = await axios.get(url)
         setMovieInfo(response.data) 
     }

@@ -4,7 +4,8 @@ import ResultItem from './ResultItem';
 const Results = (props) => {    
 
 
-    const renderedResults = props.movies.map((movie) => {
+    const renderedResults = props.movies.map((movie) => 
+    {
         return (
             <ResultItem activeMovie={props.activeMovie} movieItem={movie} onActiveMovieChange={(movie) => {
                     props.onActiveMovieChange(movie)

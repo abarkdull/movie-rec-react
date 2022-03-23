@@ -25,7 +25,6 @@ const App = () => {
         })
 
         if (response.data.length > 2) {
-            console.log(response.data);
             setFullScreen('')
             setResults(response.data);
             setActiveMovie(response.data[0])
@@ -52,8 +51,12 @@ const App = () => {
                         <div className='row'>
                             <Banner />
                         </div>
-                        <div className='row search-bar' style={{ padding: "8% 20% 8%" }}>
+                        <div className='row search-bar' style={{ padding: "5% 20% 8%" }}>
                             <SearchBar searchValidity={validSearch} onSearchSubmit={(movie) => search(movie)} />
+                        </div>
+                        <div className='row imdb-footer'>
+                            <p style={{ textAlign: 'center', color: 'white', fontFamily: 'Lato', fontStyle: 'italic'}}>-- Data courtesy of iMDB<img src='imdb.png' style={{ width: '100px', height: 'auto', alignText: 'center'}} /> --</p>
+                            
                         </div>
                     </Section>
                 </div>
